@@ -1,6 +1,16 @@
+import string
+from random import choices
 
-#TODO 2          Create a function to generatث phone numbers with 0935 and 0912 starts
 
-def create_phone_number():
-    #Code here
-    pass
+def create_phone_number(irancell=False, hamrahavval=False):
+    numbers = ''.join(choices(string.digits, k=7))
+
+    if irancell:
+        phone_number = '0935' + numbers
+    if hamrahavval:
+        phone_number = '0912' + numbers
+
+    if not hamrahavval and not irancell:
+        phone_number = '0935' + numbers
+
+    print(phone_number)
