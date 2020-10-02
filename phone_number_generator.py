@@ -13,4 +13,4 @@ def create_phone_number(irancell=False, hamrahavval=False):
     if not hamrahavval and not irancell:
         phone_number = '0935' + numbers
 
-    print(phone_number)
+    return phone_number
