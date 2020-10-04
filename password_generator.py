@@ -2,23 +2,26 @@ from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 from random import choices
 
 
-def create_password(length=8, upper=False, lower=False,
-                    digit=False, pun=False):
+def create_password(length=None, upper=None, lower=None,
+                    digit=None, pun=None):
+
     pool = ''
 
-    if lower:
+    if lower =='y':
         pool += ascii_lowercase
 
-    if upper:
+    if upper =='y':
         pool += ascii_uppercase
 
-    if digit:
+    if digit =='y':
         pool += digits 
 
-    if pun:
+    if pun =='y':
         pool += punctuation
 
-    return ''.join(choices(pool, k=length))
+    if pool != '':
+        return ''.join(choices(pool, k=length))
+
 
 
 password_generated = create_password(length=8, lower=True, upper=True,

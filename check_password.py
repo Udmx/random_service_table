@@ -1,11 +1,12 @@
 from string import punctuation
 
 # these variables are for color
-BOLD, RED, YELLOW, GREEN, BLUE = '\033[1m', '\033[31m', '\033[93m',\
-                                 '\033[32m', '\033[34m'
+
 
 
 def show_result(password, result):  # this function only levels and prints them
+    BOLD, RED, YELLOW, GREEN, BLUE = '\033[1m', '\033[31m', '\033[93m',\
+                                 '\033[32m', '\033[34m'
     count_true_result = result.count('True')
     grade = '==='
 
@@ -44,5 +45,5 @@ def recognize_password_strength(password):  # this func take pass and check it
     show_result(password, result_check)
 
 
-pass_user = input(f'{BLUE}Please enter Your password to check : ')
-recognize_password_strength(pass_user)
+# pass_user = input(f'{BLUE}Please enter Your password to check : ')
+# recognize_password_strength(pass_user)
