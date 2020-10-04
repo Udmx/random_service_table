@@ -2,8 +2,8 @@ from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 from random import choices
 
 
-def create_password(lenght=8, upper=False, lower=False,
-                    digit=False, punc=False):
+def create_password(length=8, upper=False, lower=False,
+                    digit=False, pun=False):
     pool = ''
 
     if lower:
@@ -15,13 +15,13 @@ def create_password(lenght=8, upper=False, lower=False,
     if digit:
         pool += digits 
 
-    if punc:
+    if pun:
         pool += punctuation
 
-    return ''.join(choices(pool, k = lenght))
+    return ''.join(choices(pool, k=length))
 
 
-password_generated = create_password(lenght=8, lower=True, upper=True, digit=True
-                                    ,punc=True)
+password_generated = create_password(length=8, lower=True, upper=True,
+                                     digit=True, pun=True)
 
 print(password_generated)
