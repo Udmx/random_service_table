@@ -7,6 +7,7 @@ from string import punctuation
 def show_result(password, result):  # this function only levels and prints them
     BOLD, RED, YELLOW, GREEN, BLUE = '\033[1m', '\033[31m', '\033[93m',\
                                  '\033[32m', '\033[34m'
+                                 
     count_true_result = result.count('True')
     grade = '==='
 
